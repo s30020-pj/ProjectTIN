@@ -76,6 +76,7 @@ th {
 td {
     text-align: center;
     text-justify: auto;
+    word-wrap: anywhere;
 }
 
 tr {
