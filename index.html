@@ -14,14 +14,26 @@
     </header>
 
     <div id="form">
-        <input type="text" id="name" placeholder="Task name">
-        <input type="text" id="description" placeholder="Description">
-        <input type="date" id="deadline" placeholder="Deadline">
+        <div class="column">
+            <label for="name">Task name:</label>
+            <input type="text" id="name" placeholder="Task name">
+        </div>
 
-        <button onclick="addTask()">Dodaj</button>
+        <div class="column">
+            <label for="description">Description:</label>
+            <textarea id="description" placeholder="Enter long text here"></textarea>
+        </div>
+
+        <div class="column">
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" placeholder="Deadline">
+        </div>
+
+        <div class="column">
+            <button onclick="addTask()">Dodaj</button>
+        </div>
+
     </div>
-
-    <hr>
 
     <div id="task-table">
 

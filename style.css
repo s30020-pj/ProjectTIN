@@ -2,3 +2,82 @@ header {
     display: flex;
     justify-content: center;
 }
+
+body {
+    font-family: Calibri;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(65, 163, 255);
+    color: white;
+}
+
+button {
+    background-color: rgb(46, 46, 46);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgb(73, 73, 73);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+label {
+    font-size: 20px;
+}
+
+#form input {
+    height: 40px;
+    text-align: center;
+}
+
+textarea {
+    height: 40px;
+    text-align: center;
+}
+
+hr {
+    margin: 30px;
+}
+
+#task-table {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    width: 20%;
+    font-size: 24px;
+}
+
+td {
+    text-align: center;
+    text-justify: auto;
+}
+
+tr {
+    border-bottom: 1px solid rgba(46, 46, 46, 0.123);
+}

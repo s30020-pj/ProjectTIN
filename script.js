@@ -35,7 +35,7 @@ function tableFromArray(array) {
     array.forEach(task => {
         const row = document.createElement('tr');
         if (task.done) {
-            row.style.backgroundColor = 'green';
+            row.style.backgroundColor = 'lightgreen';
         }
         Object.values(task).forEach(text => {
             if (typeof text === 'boolean') {
