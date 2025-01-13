@@ -1,0 +1,70 @@
+<script>
+
+function toggleAccordion(button) {
+
+    if (button.classList.contains("active")) {
+        button.classList.remove("active");
+        let panel = button.nextElementSibling;
+        panel.style.maxHeight = null;
+        return;
+    }
+
+    let panels = document.querySelectorAll(".panel");
+    panels.forEach(function(panel) {
+        panel.style.maxHeight = null;
+    });
+
+    let buttons = document.querySelectorAll(".accordion");
+    buttons.forEach(function(btn) {
+        btn.classList.remove("active");
+    });
+
+    button.classList.toggle("active");
+    let panel = button.nextElementSibling;
+    panel.style.maxHeight = panel.scrollHeight + "px";
+}
+
+</script>
+
+<style>
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+</style>
+
+<button onclick="toggleAccordion(this)" class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button onclick="toggleAccordion(this)" class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
+
+<button onclick="toggleAccordion(this)" class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum...</p>
+</div>
